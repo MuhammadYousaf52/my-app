@@ -22,6 +22,11 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: false,
     minlength: 8
+  },
+  provider: {
+    type: String,
+    enum: ['credentials', 'google'],
+    default: 'credentials'
   }
 }, {
   timestamps: true
